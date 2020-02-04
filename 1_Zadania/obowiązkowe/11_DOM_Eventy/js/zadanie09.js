@@ -1,3 +1,4 @@
+// Zad 9
 document.addEventListener("DOMContentLoaded", function () {
   var a = document.getElementById("a");
   var b = document.getElementById("b");
@@ -16,13 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("b: ", this);
 
 
-    function innerFuncOne() {
+    function innerFuncOne(currentTarget) {
       // Tutaj this wskazuje na element Window, bo funkcja została
       //wywołana bez żadnego kontekstu.
-      console.log("innerFuncOne: ", this);
+      console.log("innerFuncOne: ", currentTarget);
     }
-    innerFuncOne();
+    innerFuncOne(event.currentTarget);
 
   });
-
 })
